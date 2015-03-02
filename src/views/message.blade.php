@@ -5,7 +5,7 @@
         <div class="alert alert-{{ Session::get('flash_notification.level') }}">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
-            if (Session::has('flash_notification.raw'))
+            @if (Session::has('flash_notification.raw'))
 		{!! Session::get('flash_notification.message') !!}
 	    @else
 		{{ Session::get('flash_notification.message') }}
